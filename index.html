@@ -3,26 +3,84 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kopi Nusa - Website UMKM</title>
+    <title>Cucur Sundariyah - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
-        <p class="eyebrow">UMKM Pekalongan</p>
-        <h1>Kopi Nusa</h1>
-        <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
+    <a class="skip-link" href="#profil">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Cucur Sundariyah</a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="profil" class="page">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">UMKM Batang</p>
+        <h1 id="hero-title">Cucur Sundariyah</h1>
+        <p>Camilan lokal pilihan untuk segala acara.</p>
         <button id="promoButton" type="button">Lihat promo hari ini</button>
+        <img
+          src="assets/images/foto-jajanan.svg"
+          alt="Aneka jajanan lokal yang tersedia di toko kami"
+        />
       </section>
 
       <section aria-labelledby="produk-title">
         <h2 id="produk-title">Produk Unggulan</h2>
-        <ul class="products">
-          <li>Kopi Tubruk Signature - Rp18.000</li>
-          <li>Cold Brew Aren - Rp22.000</li>
-        </ul>
+        <div class="product-list">
+          <article class="product-card">
+            <h3>Cucur</h3>
+            <p>Rasa klasik gula aren lokal.</p>
+            <p class="price">Rp2.000</p>
+          </article>
+          <article class="product-card">
+            <h3>Klepon</h3>
+            <p>Sensasi gula meleleh di mulut.</p>
+            <p class="price">Rp3.000</p>
+          </article>
+          <article class="product-card">
+            <h3>Onde onde</h3>
+            <p>Bulat sempurna dan padat berisi.</p>
+            <p class="price">Rp2.000</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="info-title" class="info">
+        <h2 id="info-title">Jam Buka &amp; Lokasi</h2>
+        <div class="info-content">
+          <div class="jam">
+            <h3>Jam Buka</h3>
+            <ul>
+              <li>Senin - Jumat: 07.00 - 21.00</li>
+              <li>Sabtu - Minggu: 08.00 - 21.00</li>
+            </ul>
+          </div>
+          <div class="lokasi">
+            <h3>Lokasi</h3>
+            <p>Jl. Raya Acikiwir No. 10, Batang, Jawa Tengah</p>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>
+          &copy; 2026 Cucur Sundariyah. Data pada halaman ini bersifat dummy.
+        </p>
+        <p class="footer-contact">
+          WhatsApp:
+          <a href="https://wa.me/6282116013418">0821-1601-3418</a> &middot;
+          Instagram:
+          <a href="https://instagram.com/cucursundariyah">@cucursundariyah</a>
+        </p>
+      </div>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
