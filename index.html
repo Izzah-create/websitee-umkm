@@ -7,25 +7,36 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#profil">Lewati ke konten utama</a>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
-        <a class="brand" href="index.html">Cucur Sundariyah</a>
+        <a class="brand" href="index.html">
+          <img
+            src="assets/images/logo-umkm.jpeg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          Cucur Sundariyah
+        </a>
         <ul>
           <li><a aria-current="page" href="index.html">Beranda</a></li>
           <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
         </ul>
       </nav>
     </header>
 
-    <main id="profil" class="page">
+    <main id="konten" class="page">
       <section class="hero" aria-labelledby="hero-title">
         <p class="eyebrow">UMKM Batang</p>
         <h1 id="hero-title">Cucur Sundariyah</h1>
         <p>Camilan lokal pilihan untuk segala acara.</p>
+        <p><a href="#kontak">Lihat kontak kami</a></p>
         <button id="promoButton" type="button">Lihat promo hari ini</button>
         <img
-          src="assets/images/foto-jajanan.svg"
+          src="assets/images/foto-jajanan.png"
           alt="Aneka jajanan lokal yang tersedia di toko kami"
         />
       </section>
@@ -67,17 +78,26 @@
           </div>
         </div>
       </section>
+
+      <section id="kontak" aria-labelledby="kontak-title" class="info">
+        <h2 id="kontak-title">Kontak Singkat</h2>
+        <p>Hubungi kami untuk pemesanan atau pertanyaan seputar produk.</p>
+        <ul class="kontak-list">
+          <li>
+            <a href="https://wa.me/6282116013419">Chat kami di WhatsApp</a>
+          </li>
+          <li>
+            <a href="https://instagram.com/cucursundariyah"
+              >Kunjungi Instagram kami</a
+            >
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="footer-content">
         <p>
           &copy; 2026 Cucur Sundariyah. Data pada halaman ini bersifat dummy.
-        </p>
-        <p class="footer-contact">
-          WhatsApp:
-          <a href="https://wa.me/6282116013418">0821-1601-3418</a> &middot;
-          Instagram:
-          <a href="https://instagram.com/cucursundariyah">@cucursundariyah</a>
         </p>
       </div>
     </footer>

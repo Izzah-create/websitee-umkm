@@ -17,6 +17,12 @@ body {
   background: #6f3b1f;
   border-radius: 24px;
 }
+.hero a {
+  color: #ffd166;
+}
+.hero a:hover {
+  color: #fff3c4;
+}
 
 .hero img {
   width: 100%;
@@ -32,8 +38,22 @@ body {
   text-transform: uppercase;
 }
 
-.products {
-  padding-left: 1.2rem;
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.product-card {
+  flex: 1;
+  min-width: 200px;
+  padding: 16px;
+  background: white;
+  color: #2f2118;
+  border-radius: 16px;
+}
+.price {
+  font-weight: 700;
+  color: #6f3b1f;
 }
 
 button {
@@ -93,11 +113,19 @@ button {
   margin: 0 auto;
 }
 .brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
   color: #4b2715;
   font-weight: 800;
   text-decoration: none;
+}
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 .nav ul {
   padding: 0;
@@ -122,13 +150,58 @@ button:focus-visible {
   text-align: center;
   background: #2f2118;
 }
-.footer-contact {
+.footer-content {
   margin-top: 8px;
 }
-.footer-contact a {
+.footer-content a {
   color: #ffd166;
   text-decoration: underline;
 }
-.footer-contact a:hover {
+.footer-content a:hover {
   color: #fff3c4;
+}
+.kontak-list {
+  padding-left: 1.2rem;
+}
+.kontak-list a {
+  color: #ffd166;
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0 0 24px;
+}
+figcaption {
+  margin-top: 8px;
+  color: #6b5b52;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+caption {
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-align: left;
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #dccbbc;
+}
+.galeri-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.galeri-item {
+  margin: 0;
+  width: 200px;
+}
+.galeri-item img {
+  border-radius: 12px;
 }
