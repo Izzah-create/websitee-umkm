@@ -205,3 +205,37 @@ td {
 .galeri-item img {
   border-radius: 12px;
 }
+.field {
+  margin-bottom: 16px;
+}
+.field label {
+  display: block;
+  margin-bottom: 6px;
+}
+fieldset {
+  margin: 0 0 16px;
+}
+fieldset label {
+  display: block;
+  margin-bottom: 6px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #2f2118;
+  font: inherit;
+  background: white;
+  border: 1px solid #dccbbc;
+}
+#preview-form {
+  padding: 16px;
+  white-space: pre-wrap;
+  color: #2f2118;
+  background: white;
+  border: 1px solid #dccbbc;
+}
