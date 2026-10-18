@@ -245,13 +245,7 @@ form {
   flex: 1;
   min-width: 200px;
 }
-.galeri-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-}
 .galeri-item {
-  width: 200px;
   margin-block: 0;
 }
 .galeri-item img {
@@ -356,4 +350,76 @@ fieldset {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
+}
+/* P06 - Flexbox (satu dimensi) */
+.nav {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  margin-bottom: 0;
+}
+.nav ul {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.nav li {
+  margin: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+.product-badge {
+  align-self: flex-start;
+  padding: 0.25rem var(--space-2);
+  color: var(--color-on-accent);
+  font-size: 0.875rem;
+  font-weight: 800;
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* P06 - Grid (dua dimensi) */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+.hero .hero-image {
+  width: 100%;
+  margin-top: 0;
+  border-radius: var(--radius-md);
+}
+.product-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+.gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.product-grid .product-card {
+  margin-block: 0;
+}
+.product-card {
+  position: relative;
+}
+.product-badge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
 }
