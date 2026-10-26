@@ -497,3 +497,45 @@ fieldset {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* P09 - Output JavaScript: kartu produk dinamis dan badge stok */
+.js-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+  gap: var(--space-3);
+}
+.js-product-card {
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.js-product-card h3 {
+  margin: 0 0 var(--space-1);
+}
+.js-product-card p {
+  margin: 0 0 var(--space-1);
+}
+.stock-badge {
+  display: inline-flex;
+  margin: var(--space-1) 0.35rem var(--space-1) 0;
+  padding: 0.25rem 0.6rem;
+  color: #166534;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #dcfce7;
+  border-radius: var(--radius-pill);
+}
+.stock-badge.warning {
+  color: #92400e;
+  background: #fef3c7;
+}
+.stock-badge.empty {
+  color: #991b1b;
+  background: #fee2e2;
+}
+.stock-badge.featured {
+  color: #3730a3;
+  background: #e0e7ff;
+}
