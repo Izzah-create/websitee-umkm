@@ -126,3 +126,44 @@ function renderProduk() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProduk);
+
+// Menu hamburger untuk navigasi mobile (tindak lanjut feedback P07).
+function initMenuHamburger() {
+  const nav = document.querySelector(".nav");
+  const tombol = document.querySelector(".nav-toggle");
+
+  // Halaman tanpa tombol/menu: tidak melakukan apa-apa.
+  if (!nav || !tombol) {
+    return;
+  }
+
+  // Class ini hanya ada kalau JavaScript jalan, jadi tanpa JS menu tetap tampil.
+  nav.classList.add("js-ready");
+
+  function setMenu(terbuka) {
+    nav.classList.toggle("is-open", terbuka);
+    tombol.setAttribute("aria-expanded", String(terbuka));
+  }
+
+  tombol.addEventListener("click", () => {
+    setMenu(!nav.classList.contains("is-open"));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      setMenu(false);
+      tombol.focus();
+    }
+  });
+
+  // Saat layar melebar ke tampilan desktop, reset status menu.
+  window
+    .matchMedia("(min-width: 42rem)")
+    .addEventListener("change", (event) => {
+      if (event.matches) {
+        setMenu(false);
+      }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initMenuHamburger);

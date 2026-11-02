@@ -543,3 +543,109 @@ fieldset {
   font-weight: 700;
   color: var(--color-accent);
 }
+/* Menu hamburger (mobile-first). Class .js-ready ditambahkan oleh JavaScript,
+   jadi tanpa JS menu tetap tampil seperti biasa. */
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-bar,
+.nav-toggle-bar::before,
+.nav-toggle-bar::after {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+.nav-toggle-bar {
+  position: relative;
+}
+.nav-toggle-bar::before,
+.nav-toggle-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle-bar::before {
+  top: -0.4rem;
+}
+.nav-toggle-bar::after {
+  top: 0.4rem;
+}
+
+.nav.js-ready {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav.js-ready .nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.nav.js-ready .nav-toggle:hover {
+  background: var(--color-surface-soft);
+}
+.nav.js-ready ul {
+  display: none;
+  flex-basis: 100%;
+}
+.nav.js-ready.is-open ul {
+  display: flex;
+}
+.nav.js-ready.is-open .nav-toggle-bar {
+  background: transparent;
+}
+.nav.js-ready.is-open .nav-toggle-bar::before {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+.nav.js-ready.is-open .nav-toggle-bar::after {
+  transform: translateY(-0.4rem) rotate(-45deg);
+}
+
+@media (min-width: 42rem) {
+  .nav.js-ready {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: var(--space-3);
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: min(100% - 2rem, 60rem);
+  }
+  .nav.js-ready .nav-toggle {
+    display: none;
+  }
+  .nav.js-ready ul {
+    display: flex;
+    flex-basis: auto;
+  }
+}
+
+@media (min-width: 60rem) {
+  .nav.js-ready {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle-bar,
+  .nav-toggle-bar::before,
+  .nav-toggle-bar::after {
+    transition: none;
+  }
+}
